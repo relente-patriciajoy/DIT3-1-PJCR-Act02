@@ -99,11 +99,21 @@ class _Screen2State extends State<Screen2> {
     return Scaffold(
       appBar: AppBar(title: Text("Screen 2")),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text("Back to Screen 1"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Welcome to Screen 2",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Back to Screen 1"),
+            ),
+          ],
         ),
       ),
     );
